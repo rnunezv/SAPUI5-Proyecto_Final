@@ -1,0 +1,9 @@
+<mvc:View   controllerName="logaligroup.Empleados.controller.CrearEmpleado" 
+            xmlns:mvc="sap.ui.core.mvc" 
+            xmlns="sap.m"
+            displayBlock="true">
+            
+
+    <Text text="Crear Empleado"></Text>
+
+</mvc:View>

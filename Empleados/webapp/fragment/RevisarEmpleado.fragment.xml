@@ -1,0 +1,64 @@
+<core:FragmentDefinition    xmlns:core="sap.ui.core" 
+                            xmlns="sap.m"
+                            xmlns:form="sap.ui.layout.form">
+
+    <!-- 1. Tipo empleado -->
+    <form:SimpleForm title="1. {i18n>tipoEmpleado}" 
+                     editable="false"
+                     layout="ResponsiveLayout">
+
+        <form:content>
+            <Label text="{i18n>tipo}" />
+            <Text text="{=${/TipoEmp} === 'interno' ? ${i18n>interno} : ${/TipoEmp} === 'autonomo' ? ${i18n>autonomo} : ${i18n>gerente}}"/>   
+
+            <Link text="{i18n>editar}" press="onEditarPaso1"/>        
+        </form:content>       
+        
+    </form:SimpleForm>
+
+
+    <!-- 2. Datos empleado  -->
+    <form:SimpleForm title="2. {i18n>datosEmpleado}"
+                     editable="false"
+                     layout="ResponsiveLayout">
+        <form:content>
+            <Label text="{i18n>nombre}" />
+            <Text text="{/FirstName}"/>   
+            <Label text="{i18n>apellidos}" />
+            <Text text="{/LastName}"/> 
+            <Label text="{i18n>dni}" />
+            <Text text="{/Dni}"/> 
+            <Label text="{i18n>salarioBrutoAnual}" />
+            <Text text="{/Sueldo}"/> 
+            <Label text="{i18n>fechaIncorporacion}" />
+            <Text text="{/CreationDate}"/> 
+
+            <Link text="{i18n>editar}" press="onEditarPaso2"/>
+        </form:content>
+
+    </form:SimpleForm>
+
+
+    <!-- 3. Informacion adiciona  -->
+    <form:SimpleForm title="3. {i18n>infoAdicional}"
+                      editable="false"
+                      layout="ResponsiveLayout">
+        <form:content>
+            <Label text="{i18n>comentario}" />
+            <Text text="{/Comentario}"/> 
+             <Label text="{i18n>documentos}" />             
+            <Text text="{/NumArchivos} {i18n>archivos}"/> 
+            <Label />
+
+            <List items="{/ListaArchivos}">
+                <items>
+                    <StandardListItem title="{NombreArchivo}" />
+                </items>
+            </List>
+
+            <Link text="{i18n>editar}" press="onEditarPaso3"/>
+        </form:content>   
+
+    </form:SimpleForm>
+
+</core:FragmentDefinition>

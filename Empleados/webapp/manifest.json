@@ -17,11 +17,11 @@
         },
         "dataSources": {
             "ZEMPLOYEES_SRV": {
-                "uri": "/sap/opu/odata/sap/ZEMPLOYEES_SRV/",
+                "uri": "sap/opu/odata/sap/ZEMPLOYEES_SRV/",
                 "type": "OData",
                 "settings": {
                     "odataVersion": "2.0",
-                    "localUri": "localService/metadata.xml"
+                    "localUri": "localService/ZEMPLOYEES_SRV/metadata.xml"
                 }
             }
         }
@@ -48,7 +48,7 @@
             "viewName": "logaligroup.Empleados.view.App",
             "type": "XML",
             "async": true,
-            "id": "App"
+            "id": "app"
         },
         "dependencies": {
             "minUI5Version": "1.60.1",
@@ -69,7 +69,7 @@
                     "bundleName": "logaligroup.Empleados.i18n.i18n"
                 }
             },
-            "odataModel": {
+            "odataGestionModel": {
                 "type": "sap.ui.model.odata.v2.ODataModel",
                 "dataSource": "ZEMPLOYEES_SRV",
                 "preload": true,
@@ -102,15 +102,8 @@
             },
             "routes": [
                 {
-                    "name": "RouteApp",
-                    "pattern": "RouteApp",
-                    "target": [
-                        "TargetApp"
-                    ]
-                },
-                {
                     "name": "RouteMenu",
-                    "pattern": "RouteMenu",
+                    "pattern": "",
                     "target": [
                         "TargetMenu"
                     ]
@@ -130,14 +123,7 @@
                     ]
                 }
             ],
-            "targets": {
-                "TargetApp": {
-                    "viewType": "XML",
-                    "transition": "slide",
-                    "clearControlAggregation": false,
-                    "viewId": "App",
-                    "viewName": "App"
-                },
+            "targets": {       
                 "TargetMenu": {
                     "viewType": "XML",
                     "transition": "slide",

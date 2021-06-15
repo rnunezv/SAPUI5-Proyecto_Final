@@ -18,7 +18,7 @@
         "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
         "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/Gestion/Empleados\"}"
       },
-      "envFile": "${workspaceFolder}/Empleados/.env1",
+      "envFile": "${workspaceFolder}/Empleados/.env2",
       "preLaunchTask": "Build Gestion"
     }
   ]

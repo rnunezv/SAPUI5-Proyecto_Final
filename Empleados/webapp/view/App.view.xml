@@ -6,7 +6,7 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>	
-                <mvc:XMLView viewName="logaligroup.Empleados.view.Menu"></mvc:XMLView>   
+
 			</pages>
 		</App>
 	</Shell>
